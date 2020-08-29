@@ -1,17 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
 *{
-	font-family: 'Rubik', sans-serif;
-	scroll-behavior: smooth;
-	margin: 0;
+  font-family: 'Rubik', sans-serif;
+  scroll-behavior: smooth;
+  margin: 0;
+  text-decoration: none;
 }
 
-body{
-	overflow-x: hidden;
-}
 
-/*nav*/
+
 nav{
-	z-index: 99;
+  z-index: 99;
 }
 header nav {
   background-color: rgba(0, 0, 0, 0.8);
@@ -35,11 +33,11 @@ header nav ul {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 header nav ul li {
   -webkit-transform: translateY(50px);
-          transform: translateY(50px);
+  transform: translateY(50px);
   opacity: 0;
 }
 header nav ul li a {
@@ -68,7 +66,7 @@ header nav ul li a:hover {
 }
 
 .toggle-btn:hover{
-	opacity: 0.6;
+  opacity: 0.6;
 }
 
 .toggle-btn .bar {
@@ -92,7 +90,7 @@ header nav ul li a:hover {
 }
 #toggle:checked ~ nav ul li {
   -webkit-transform: translateY(0px);
-          transform: translateY(0px);
+  transform: translateY(0px);
   opacity: 1;
 }
 #toggle:checked ~ nav ul li:nth-child(1) {
@@ -116,201 +114,60 @@ header nav ul li a:hover {
 }
 #toggle:checked + label.toggle-btn .bar:nth-child(2) {
   -webkit-transform: translateX(50px);
-          transform: translateX(50px);
+  transform: translateX(50px);
   opacity: 0;
 }
 #toggle:checked + label.toggle-btn .bar:nth-child(1) {
   -webkit-transform: translateY(10px) rotate(45deg);
-          transform: translateY(10px) rotate(45deg);
+  transform: translateY(10px) rotate(45deg);
 }
 #toggle:checked + label.toggle-btn .bar:nth-child(3) {
   -webkit-transform: translateY(-8px) rotate(-45deg);
-          transform: translateY(-8px) rotate(-45deg);
-}
-
-
-/*INDEX*/
-
-svg{
-	display: block;
-}
-
-.back{
-	position: absolute;
-	left: 50px;
-	top: 50px;
-	margin: 0;
-	z-index: 97;
-}
-
-
-.back:hover{
-	opacity: .5;
-}
-
-.wrapper{
-	width: 1640px;
-	margin: auto;
-	margin-top: 100px;
-}
-
-.background{
-	position: absolute;
-	top: 100px;
-	opacity: 0.2;
-	left: 0;
-}
-
-.index{
-	position: relative;
-	margin: auto;
-	display: grid;
-	grid-template-columns: 50% 50%;
-}
-
-.ft{
-	width: 500px;
-}
-
-.scroll{
-	left: 0;
-	top: 700px;
-	position: absolute;
-}
-
-
-.areas{
-	width: 100%;
-	position: relative;
-	top: 230px;
-	margin: 0;
-	display: grid;
-	grid-template-columns: 50% 50%;
-}
-
-.cover01{
-	position: relative;
-	display: block;
-}
-
-.img_area1{
-	position: absolute;
-	float: right;
-	left: 0;
-	animation: transform .2s;
-}
-
-.img_area2{
-	position: absolute;
-	float: right;
-	right: 80px;
-	padding-top: 60px;
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 
 
-/*SELECTOR*/
-.selector{
-	position: fixed;
-	top: 45%;
-	right: 60px;
-	float: right;
-	margin: 0;
-	align-items: center;
+
+.container {
+  display: flex;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 6%;
+  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+  line-height: 0;
+  border-radius: 5px;
+}
+
+.box img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover; 
+  transition: .5s;
+}
+
+.box span {
+  font-size: 3.8vh;
+  font-weight: 600;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+  background-color: white;
+  color: black;
 
 }
 
-.top{
-	right: 65;
+.box:hover { flex: 1 1 50%; }
+.box:hover img {
+  width: 100%;
+  height: 100%;
 }
-
-/* BRANDING */
-
-.title{
-	margin: auto;
-	left: 30%;
-	top: 80px;
-	position: absolute;
-}
-
-.img_area3{
-	position: absolute;
-	left: 400px;
-}
-
-.covers{
-	top: 400px;
-	position: absolute;
-}
-
-.cover02{
-	margin-top: 150px;
-}
-
-.img_area4{
-	position: absolute;
-	left: 450px;
-}
-
-/* UI/UX */
-
-.space{
-	margin-top: 450px;
-}
-
-.img_area5{
-	position: absolute;
-	left: 160px;
-	width: 85%;
-}
-
-.spotify{
-	position: absolute;
-	left: 60px;
-}
-
-.cover04{
-	position: absolute;
-	left: 350px;
-}
-
-.cover05{
-	position: absolute;
-	left: 80px;
-}
-
-.img_area6{
-	position: absolute;
-	float: left;
-}
-
-.cover05{
-	position: absolute;
-}
-
-/* projects */
-
-.projects{
-	position: absolute;
-	margin: 0;
-	left: 0;
-	top: 0;
-}
-
-.hover{
- 	animation: transform .5s ease;
-}
-
-.hover:hover{
-
-	transform: scale(1.1); 
- }
-
- .hover2{
- 	animation: transform .5s ease;
-}
-
-.hover2:hover{
-
-	transform: scale(1.05); 
- }
